@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+#person:
+#    personName: 张三
+#    age: 20
+#    boss: true
+#    birthDay: 2018/09/21
+#    maps: {key1: value1, key2: value2}
+#    lists:
+#      - list1
+#      - list2
+#      - list3
+#    dog:
+#      name: 小狗
+#      age: 2
