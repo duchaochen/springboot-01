@@ -1,4 +1,4 @@
-###获取其它配置文件
+### 获取其它配置文件
     使用以下3个注解可以直接获取配置文件的对应的值映射到实体类中
     @Component
     @PropertySource(value = {"classpath:person.properties"})
@@ -15,7 +15,7 @@
         person.maps.key1=aaa
         person.maps.key2=bbb
 
-###当在.properties的配置文件中有中文时，读取出来的总是乱码
+### 当在.properties的配置文件中有中文时，读取出来的总是乱码
     比如我的application.properties配置文件的内容如下：
     person.person-name=张三
     person.age=25
@@ -41,7 +41,7 @@
     将Properties Files (*.properties)下的Default encoding for properties files设置为UTF-8，
     将Transparent native-to-ascii conversion前的勾选上。
 
-###加载其它bean的xml文件的2中方式
+### 加载其它bean的xml文件的2中方式
        bean.xml内容：
        <?xml version="1.0" encoding="UTF-8"?>
        <beans xmlns="http://www.springframework.org/schema/beans"
@@ -87,7 +87,7 @@
        		System.out.println(helloService);
        	}
 
-###占位符${random.value}、${random.int}、${random.long}${random.int(10)}、${random.int[1024,65536]}
+### 占位符${random.value}、${random.int}、${random.long}${random.int(10)}、${random.int[1024,65536]}
         代码演示：
         person.last-name=张三${random.uuid}
         person.age=${random.int}
@@ -125,7 +125,7 @@
     
     ​		-Dspring.profiles.active=dev
     
-###配置文件加载位置
+### 配置文件加载位置
     
     springboot 启动会扫描以下位置的application.properties或者application.yml文件作为Spring boot的默认配置文件
     
@@ -142,7 +142,7 @@
     SpringBoot会从这四个位置全部加载主配置文件；**互补配置**；
     
     
-###日志SLF4j使用
+### 日志SLF4j使用
     
     ### 1、如何在系统中使用SLF4j   https://www.slf4j.org
     
@@ -159,7 +159,7 @@
         logger.info("Hello World");
       }
     }
-###指定日志级别
+### 指定日志级别
     代码：
     Logger logger = LoggerFactory.getLogger(getClass());
     logger.trace("这是trace...日志");
