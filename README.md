@@ -140,4 +140,22 @@
     优先级由高到底，高优先级的配置会覆盖低优先级的配置；
     
     SpringBoot会从这四个位置全部加载主配置文件；**互补配置**；
-       
+    
+    
+###日志SLF4j使用
+    
+    ### 1、如何在系统中使用SLF4j   https://www.slf4j.org
+    
+    以后开发的时候，日志记录方法的调用，不应该来直接调用日志的实现类，而是调用日志抽象层里面的方法；
+    
+    给系统里面导入slf4j的jar和  logback的实现jar
+    
+    import org.slf4j.Logger;
+    import org.slf4j.LoggerFactory;
+    
+    public class HelloWorld {
+      public static void main(String[] args) {
+        Logger logger = LoggerFactory.getLogger(HelloWorld.class);
+        logger.info("Hello World");
+      }
+    }
