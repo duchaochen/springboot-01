@@ -159,3 +159,21 @@
         logger.info("Hello World");
       }
     }
+###指定日志级别
+    代码：
+    Logger logger = LoggerFactory.getLogger(getClass());
+    logger.trace("这是trace...日志");
+    logger.debug("这是debug...日志");
+    logger.warn("这是warn...日志");
+    logger.info("这是info...日志");
+    logger.error("这是error...日志");
+    配置：
+    1.logging.level.com.adu = trace//logging.level.包名=trace/debug/warn/info/error
+    
+    2.指定日志生成路径,如果是windows下该路径会在项目对应的盘符的根目录（一般linux下使用）,和上面的2选一
+    logging.path=/springboot/log
+    
+    3.在控制台输出日志
+    logging.pattern.console=%d{yyyy-MM-dd} [%thread] %-5level %logger{50} - %msg%n
+    4.指定文件中日志输出的格式
+    logging.pattern.file=%d{yyyy-MM-dd} === [%thread] === %-5level === %logger{50} ==== %msg%n
