@@ -16,6 +16,7 @@
         person.maps.key2=bbb
 
 ### 当在.properties的配置文件中有中文时，读取出来的总是乱码
+
     比如我的application.properties配置文件的内容如下：
     person.person-name=张三
     person.age=25
@@ -42,6 +43,7 @@
     将Transparent native-to-ascii conversion前的勾选上。
 
 ### 加载其它bean的xml文件的2中方式
+
        bean.xml内容：
        <?xml version="1.0" encoding="UTF-8"?>
        <beans xmlns="http://www.springframework.org/schema/beans"
